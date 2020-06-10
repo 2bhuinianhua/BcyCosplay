@@ -8,7 +8,30 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <NavigationView x:Name="nv" IsSettingsVisible="True" PaneDisplayMode="Top" Background="Transparent"  IsBackButtonVisible="Collapsed" IsBackEnabled="False" ItemInvoked="Nv_ItemInvoked" >
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Name="nvHome" Icon="Home" Content="个人中心"/>
+            <NavigationViewItem x:Name="nvFollow" Content="关注"/>
+            <NavigationViewItem x:Name="nvFind" Content="发现"/>
+            <NavigationViewItem x:Name="nvCos" Content="Cos"/>
+            <NavigationViewItem x:Name="nvVideo" Content="视频"/>
+            <NavigationViewItem x:Name="nvDraw" Content="绘画"/>
+            <NavigationViewItem x:Name="nvWrite" Content="写作"/>
+            <NavigationViewItem x:Name="nvAnswer" Content="问答"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem x:Name="nvCircle" Content="圈子"/>
+        </NavigationView.MenuItems>
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" />
+        </NavigationView.AutoSuggestBox>
+        <NavigationView.PaneFooter>
+            <StackPanel x:Name="FooterStackPanel" Orientation="Horizontal" Visibility="Visible">
+                <NavigationViewItem x:Name="fullScreen" Icon="FullScreen"></NavigationViewItem>
+                <NavigationViewItem Icon="Download" AutomationProperties.Name="download" />
+                <NavigationViewItem x:Name="nvFavor" Icon="Favorite" AutomationProperties.Name="favorite" Tapped="NvFavor_Tapped"/>
+            </StackPanel>
+        </NavigationView.PaneFooter>
 
-    </Grid>
+        <Frame x:Name="contentFrame" RequestedTheme="Light"/>
+    </NavigationView>
 </Page>

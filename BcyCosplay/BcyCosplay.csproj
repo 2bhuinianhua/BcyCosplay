@@ -12,7 +12,7 @@
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -119,6 +119,65 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\Special\bcy.cs" />
+    <Compile Include="Data\JsonApi\BcyJsonConverter.cs" />
+    <Compile Include="Data\TypeSet.cs" />
+    <Compile Include="Data\JsonApi\ListJson.cs" />
+    <Compile Include="Data\DatumData.cs" />
+    <Compile Include="Data\JsonApi\GetFeedsJson.cs" />
+    <Compile Include="Data\HighlightCircle.cs" />
+    <Compile Include="Data\Announce.cs" />
+    <Compile Include="Data\Cover.cs" />
+    <Compile Include="Data\Datum.cs" />
+    <Compile Include="Data\Comment.cs" />
+    <Compile Include="Data\Utag.cs" />
+    <Compile Include="Data\JsonApi\PcAnnounceJson.cs" />
+    <Compile Include="Data\JsonApi\PostJson.cs" />
+    <Compile Include="Data\JsonApi\SelfPostJson.cs" />
+    <Compile Include="Data\JsonApi\CircleFeedJson.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Data\Group.cs" />
+    <Compile Include="Data\Reply.cs" />
+    <Compile Include="Data\JsonApi\GetMyCollectionListJson.cs" />
+    <Compile Include="Data\CollectionsData.cs" />
+    <Compile Include="Data\JsonApi\BlockListJson.cs" />
+    <Compile Include="Data\UserHashData.cs" />
+    <Compile Include="Data\UserHash.cs" />
+    <Compile Include="Data\JsonApi\FavorJson.cs" />
+    <Compile Include="Data\CollectionElement.cs" />
+    <Compile Include="Data\CollectionCollection.cs" />
+    <Compile Include="Data\Tag.cs" />
+    <Compile Include="Data\JsonApi\TopListItemInfoJson.cs" />
+    <Compile Include="Data\TopListItemInfoData.cs" />
+    <Compile Include="Data\TopListItemInfoItem.cs" />
+    <Compile Include="Data\JsonApi\FollowListJson.cs" />
+    <Compile Include="Data\TopListItemInfoTopListDetail.cs" />
+    <Compile Include="Data\UserFollowInfoData.cs" />
+    <Compile Include="Data\UserFollowInfo.cs" />
+    <Compile Include="Data\JsonApi\FollowListCircleJson.cs" />
+    <Compile Include="Data\UserFollowCirclesData.cs" />
+    <Compile Include="Data\UserFollowCircle.cs" />
+    <Compile Include="Data\JsonApi\FriendsFeedJson.cs" />
+    <Compile Include="Data\AtUserInfo.cs" />
+    <Compile Include="Data\Collection.cs" />
+    <Compile Include="Data\Special\Enum.cs" />
+    <Compile Include="Data\VideoInfo.cs" />
+    <Compile Include="Data\TopListDetail.cs" />
+    <Compile Include="Data\SetData.cs" />
+    <Compile Include="Data\Right.cs" />
+    <Compile Include="Data\Prop.cs" />
+    <Compile Include="Data\PostTag.cs" />
+    <Compile Include="Data\Multi.cs" />
+    <Compile Include="Data\ExtraProperties.cs" />
+    <Compile Include="Data\ImageList.cs" />
+    <Compile Include="Data\ItemDetail.cs" />
+    <Compile Include="Data\ItemUserTop.cs" />
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\ListData.cs" />
+    <Compile Include="Data\ItemInfoData.cs" />
+    <Compile Include="Data\ItemsData.cs" />
+    <Compile Include="Data\ItemsCountData.cs" />
+    <Compile Include="Data\Special\IntOrString.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -152,8 +211,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.8</Version>
+      <Version>6.2.10</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Lib\" />
+    <Folder Include="Page\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
